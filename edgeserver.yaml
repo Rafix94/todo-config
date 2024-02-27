@@ -9,7 +9,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "gateway, *"
   health:
     readiness-state:
       enabled: true

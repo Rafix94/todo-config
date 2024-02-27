@@ -35,3 +35,11 @@ resilience4j.circuitbreaker:
       permitted-number-of-calls-in-half-open-state: 2
       failure-rate-threshold: 50
       wait-duration-in-open-state: 10000
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka:8091/eureka/

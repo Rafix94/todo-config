@@ -19,7 +19,8 @@ management:
     health:
       probes:
         enabled: true
-    gateway: true
+    gateway:
+     enabled: true
   info:
     env:
       enabled: true

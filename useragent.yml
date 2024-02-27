@@ -35,4 +35,5 @@ eureka:
       defaultZone: http://eureka:8091/eureka/
 logging:
   level:
+    root: DEBUG
     com.recruitment.useragent: DEBUG

@@ -33,3 +33,6 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://eureka:8091/eureka/
+logging:
+  level:
+    com.recruitment.useragent: DEBUG

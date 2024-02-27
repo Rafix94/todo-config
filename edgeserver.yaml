@@ -24,10 +24,6 @@ management:
   info:
     env:
       enabled: true
-eureka:
-  client:
-    fetchRegistry: false
-    registerWithEureka: false
 resilience4j.circuitbreaker:
   configs:
     default:

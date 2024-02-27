@@ -12,6 +12,10 @@ management:
     health:
       probes:
         enabled: true
+    gateway: true
+  info:
+    env:
+      enabled: true
 eureka:
   client:
     fetchRegistry: false

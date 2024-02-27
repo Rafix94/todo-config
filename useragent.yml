@@ -25,3 +25,11 @@ management:
     health:
       probes:
         enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eureka:8091/eureka/

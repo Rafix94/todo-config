@@ -10,16 +10,11 @@ spring:
           '[/**]':
             allowedOrigins: "*"
             allowedMethods:
-            - GET
-            - POST
+              - GET
+              - POST
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-              allowedOrigins: "*"
-              allowedMethods: "*"
-              allowedHeaders: "*"
+
 management:
   endpoints:
     web:

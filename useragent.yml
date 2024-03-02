@@ -11,6 +11,10 @@ spring:
       ddl-auto: validate
 server:
   port: 8092
+  connection-timeout: 60000
+  tomcat:
+    connection-timeout: 60000
+
 
 management:
   endpoints:

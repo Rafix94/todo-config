@@ -37,3 +37,5 @@ eureka:
 logging:
   level:
     root: INFO
+spring-boot.run.jvmArguments=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+

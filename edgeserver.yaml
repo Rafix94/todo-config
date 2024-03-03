@@ -1,4 +1,13 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5433/edge_server_db
+    username: postgres
+    password: password
+  liquibase:
+    change-log: classpath:/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: validate
   cloud:
     gateway:
       discovery:

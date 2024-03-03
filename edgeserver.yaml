@@ -53,3 +53,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://eureka:8091/eureka/
+loging:
+  level:
+    com:
+      recruitment:
+        edgeserver: DEBUG

@@ -46,4 +46,5 @@ keycloak:
   realm: toDoListApp
   client-id: userAgentClient
   client-secret: HGNOvb7mTOgLnALnu4WKzjR8o6EWXtGS
+  user-role: USER
 

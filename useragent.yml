@@ -41,4 +41,8 @@ eureka:
 logging:
   level:
     root: INFO
-
+keycloak:
+  auth-server-url: http://keycloak:8080/auth
+  realm: toDoListApp
+  resource: todolistpublicclient
+  credentials-secret: tYi4vdun8wxhIj55GfvW8xoDdp5dI3Gt

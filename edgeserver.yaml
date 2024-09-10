@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres_edge_server:5432/edge_server_db
+    url: jdbc:postgresql://postgres_edge_server:5433/edge_server_db
     username: postgres
     password: password
   liquibase:

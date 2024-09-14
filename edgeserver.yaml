@@ -26,6 +26,12 @@ spring:
               - POST
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+  security:
+    oauth2:
+      resourceServer:
+        jwt:
+          jwk-set-uri: "http://keycloak:8080/realms/toDoListApp/protocol/openid-connect/certs"
+
 server:
   connection-timeout: 60000
   tomcat:

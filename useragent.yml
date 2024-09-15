@@ -1,7 +1,7 @@
 spring:
   security.oauth2.resourceserver.jwt.jwk-set-uri: http://keycloak:8080/realms/toDoListApp/protocol/openid-connect/certs
   datasource:
-    url: jdbc:postgresql://postgres:5432/useragent_db
+    url: jdbc:postgresql://postgres-useragent:5432/useragent_db
     username: postgres
     password: password
   liquibase:

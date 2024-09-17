@@ -1,0 +1,52 @@
+spring:
+  security.oauth2.resourceserver.jwt.jwk-set-uri: keycloak.default.svc.cluster.local:80/realms/toDoListApp/protocol/openid-connect/certs
+  datasource:
+    url: jdbc:postgresql://postgres-useragent:5432/useragent_db
+    username: postgres
+    password: password
+  liquibase:
+    change-log: classpath:/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+server:
+  port: 8092
+  connection-timeout: 60000
+  tomcat:
+    connection-timeout: 60000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eureka:8091/eureka/
+logging:
+  level:
+    root: INFO
+keycloak:
+  auth-server-url: http://keycloak:8080
+  realm: toDoListApp
+  client-id: userAgentClient
+  client-secret: HGNOvb7mTOgLnALnu4WKzjR8o6EWXtGS
+  user-role: USER
+metrics:
+  tags:
+    application: ${spring.application.name}

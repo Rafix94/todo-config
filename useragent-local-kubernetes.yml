@@ -1,5 +1,5 @@
 spring:
-  security.oauth2.resourceserver.jwt.jwk-set-uri: keycloak.default.svc.cluster.local:80/realms/toDoListApp/protocol/openid-connect/certs
+  security.oauth2.resourceserver.jwt.jwk-set-uri: http://keycloak.default.svc.cluster.local:80/realms/toDoListApp/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://postgresql:5432/useragent
     username: useragent

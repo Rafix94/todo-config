@@ -8,6 +8,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
 server:
   port: 8092
   connection-timeout: 60000

@@ -37,10 +37,9 @@ logging:
   level:
     root: INFO
 keycloak:
-  auth-server-url: http://keycloak:8080
+  auth-server-url: http://keycloak:80
   realm: toDoListApp
   client-id: userAgentClient
-  client-secret: HGNOvb7mTOgLnALnu4WKzjR8o6EWXtGS
   user-role: USER
 metrics:
   tags:

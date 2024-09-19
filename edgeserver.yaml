@@ -13,10 +13,6 @@ spring:
       httpclient:
         connect-timeout: 50000
         response-timeout: 20s
-      discovery:
-        locator:
-          enabled: false
-          lowerCaseServiceId: true
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -26,6 +22,10 @@ spring:
               - POST
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+    kubernetes:
+      discovery:
+        enabled: true
+        all-namespaces: true
   security:
     oauth2:
       resourceServer:

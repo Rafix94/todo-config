@@ -1,0 +1,46 @@
+spring:
+  security.oauth2.resourceserver.jwt.jwk-set-uri: http://keycloak.default.svc.cluster.local:80/realms/toDoListApp/protocol/openid-connect/certs
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/useragent
+    username: useragent
+  liquibase:
+    change-log: classpath:/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+server:
+  port: 8092
+  connection-timeout: 60000
+  tomcat:
+    connection-timeout: 60000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+logging:
+  level:
+    root: INFO
+keycloak:
+  auth-server-url: http://keycloak:80
+  realm: toDoListApp
+  client-id: userAgentClient
+  user-role: USER
+metrics:
+  tags:
+    application: ${spring.application.name}

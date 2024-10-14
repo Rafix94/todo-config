@@ -37,7 +37,7 @@ logging:
   level:
     root: INFO
 keycloak:
-  auth-server-url: http://keycloak:80
+  auth-server-url: http://keycloak.default.svc.cluster.local:80/
   realm: toDoListApp
   client-id: userAgentClient
   user-role: USER

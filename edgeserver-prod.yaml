@@ -12,3 +12,6 @@ cors:
   allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
   allowed-headers: "*"
   allow-credentials: true
+gateway:
+  ui-uri: https://todolist.ooguy.com
+  redirect-host: https://todolist.ooguy.com

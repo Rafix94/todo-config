@@ -12,3 +12,6 @@ cors:
   allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
   allowed-headers: "*"
   allow-credentials: true
+gateway:
+  ui-uri: http://localhost:4200
+  redirect-host: http://localhost

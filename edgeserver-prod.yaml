@@ -14,7 +14,7 @@ cors:
   allow-credentials: true
 gateway:
   ui-uri: https://todolist.ooguy.com
-  redirect-host: http://todolist.ooguy.com
+  redirect-host: todolist.ooguy.com
 server:
   port: 8093
   ssl:

@@ -25,7 +25,7 @@ cors:
   allow-credentials: true
 
 keycloak:
-  auth-server-url: http://keyclaok
+  auth-server-url: http://keycloak
   realm: toDoListApp
   client-id: taskManagerClient
   user-role: USER

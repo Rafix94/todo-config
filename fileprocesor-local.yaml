@@ -23,8 +23,3 @@ spring:
 clamAV:
   url: clamav
   port: 3310
-
-spaces:
-  endpoint: https://ams3.digitaloceanspaces.com
-  access-key: DO006Z78WB49GXUAFDGZ
-  bucket-name: taskmanager-attachments

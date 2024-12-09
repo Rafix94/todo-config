@@ -1,6 +1,6 @@
 spring:
   application:
-    name: taskManager
+    name: taskmanager
   security.oauth2.resourceserver.jwt.jwk-set-uri: http://keycloak:80/realms/toDoListApp/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://postgresql:5432/taskmanager

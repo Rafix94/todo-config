@@ -2,38 +2,33 @@ spring:
   application:
     name:
       fileprocesor
-
   kafka:
     streams:
-      application-id: file-processor-${random.uuid}
-    bootstrap-servers:
-      - kafka:9092
+      application-id: file-processor
+    bootstrap-servers: kafka:9092
     properties:
+      security.protocol: SASL_PLAINTEXT
+      sasl.mechanism: SCRAM-SHA-256
       default:
         key:
-          sarde: org.apache.kafka.common.serialization.Serdes$StringSerde
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
         value:
-          sarde: org.apache.kafka.common.serialization.Serdes$StringSerde
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       commit:
         interval:
           ms: 3000
-      processing:
-        quarantee: exactly_once_v2
-
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 clamAV:
-  url: clamav
+  url: localhost
   port: 3310
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  health:
-    readiness-state:
-      enabled: true
-    liveness-state:
-      enabled: true
-  endpoint:
-    health:
-      probes:
-        enabled: true
+
+spaces:
+  endpoint: https://ams3.digitaloceanspaces.com
+  accessKey: DO003CP39TMHVUWC4GYV
+  bucketName: taskmanager-attachments

@@ -15,6 +15,28 @@ spring:
     hibernate:
       ddl-auto: validate
       dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    streams:
+      application-id: file-processor
+    bootstrap-servers: kafka:9092
+    properties:
+      security.protocol: SASL_PLAINTEXT
+      sasl.mechanism: SCRAM-SHA-256
+      default:
+        key:
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        value:
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+      commit:
+        interval:
+          ms: 3000
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 server:
   port: 8094
 

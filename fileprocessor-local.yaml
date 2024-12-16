@@ -5,8 +5,6 @@ spring:
   kafka:
     streams:
       application-id: file-processor
-      properties:
-        spring.json.trusted.packages: "com.todolist"
     bootstrap-servers: kafka:9092
     properties:
       security.protocol: SASL_PLAINTEXT
@@ -30,6 +28,8 @@ spring:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: "com.todolist"
 clamav:
   url: 123
   port: 3310

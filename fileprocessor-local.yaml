@@ -7,7 +7,7 @@ spring:
       application-id: file-processor
     bootstrap-servers: kafka:9092
     properties:
-      spring.json.trusted.packages: "com.todolist.common.*"
+      spring.json.trusted.packages: "com.todolist.*"
       security.protocol: SASL_PLAINTEXT
       sasl.mechanism: SCRAM-SHA-256
       sasl.jaas.config: >

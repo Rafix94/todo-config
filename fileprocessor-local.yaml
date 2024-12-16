@@ -38,3 +38,7 @@ spaces:
   endpoint: https://ams3.digitaloceanspaces.com
   accessKey: DO003CP39TMHVUWC4GYV
   bucketName: taskmanager-attachments
+logging:
+  level:
+    org.springframework.kafka: DEBUG
+    org.springframework.boot.context.properties: DEBUG

@@ -17,7 +17,7 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
   kafka:
     streams:
-      application-id: file-processor
+      application-id: task-manager
     bootstrap-servers: kafka:9092
     properties:
       security.protocol: SASL_PLAINTEXT
@@ -41,6 +41,9 @@ spring:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.trusted.packages: 
+          - com.todolist
 server:
   port: 8094
 

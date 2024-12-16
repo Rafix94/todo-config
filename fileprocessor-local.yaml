@@ -7,6 +7,7 @@ spring:
       application-id: file-processor
     bootstrap-servers: kafka:9092
     properties:
+      spring.json.trusted.packages: "com.todolist"
       security.protocol: SASL_PLAINTEXT
       sasl.mechanism: SCRAM-SHA-256
       sasl.jaas.config: >
@@ -24,6 +25,8 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        spring.json.trusted.packages: "com.todolist"
     consumer:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

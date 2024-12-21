@@ -4,8 +4,8 @@ spring:
   security.oauth2.resourceserver.jwt.jwk-set-uri: http://keycloak:80/realms/toDoListApp/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://postgresql:5432/refinementservice
-    username: refinement-service
-    password: refinement-service_password
+    username: refinementService
+    password: refinementService_password
     jakarta:
       persistence:
         jdbc:

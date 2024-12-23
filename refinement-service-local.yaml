@@ -43,6 +43,11 @@ spring:
       properties:
         spring.json.trusted.packages: 
           - com.todolist
+keycloak:
+  auth-server-url: http://keycloak
+  realm: toDoListApp
+  client-id: taskManagerClient
+  user-role: USER
 management:
   endpoints:
     web:

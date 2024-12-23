@@ -34,3 +34,8 @@ spring:
 clamav:
   url: clamav
   port: 3310
+keycloak:
+  auth-server-url: http://keycloak
+  realm: toDoListApp
+  client-id: taskManagerClient
+  user-role: USER

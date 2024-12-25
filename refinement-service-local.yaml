@@ -16,7 +16,7 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
   kafka:
     streams:
-      application-id: refinement-service-
+      application-id: refinement-service
       bootstrap-servers: kafka:9092
     properties:
       security.protocol: SASL_PLAINTEXT

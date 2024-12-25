@@ -65,7 +65,5 @@ management:
 
 logging:
   level:
-    org.springframework.web.socket: DEBUG
-    org.springframework.messaging: DEBUG
-    org.springframework.messaging.simp: DEBUG
+    org.apache.kafka.streams: DEBUG
 

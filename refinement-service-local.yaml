@@ -63,7 +63,4 @@ management:
       probes:
         enabled: true
 
-logging:
-  level:
-    org.apache.kafka.streams: DEBUG
 

@@ -43,6 +43,8 @@ spring:
       properties:
         spring.json.trusted.packages: 
           - com.todolist
+  cache:
+    type: simple
 keycloak:
   auth-server-url: http://keycloak
   realm: toDoListApp

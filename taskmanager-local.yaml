@@ -74,7 +74,5 @@ management:
         enabled: true
 logging:
   level:
-    root: DEBUG
+    org.apache.kafka.streams: DEBUG
     org.apache.kafka: DEBUG
-    org.springframework: DEBUG
-    com.todolist.refinementservice: TRACE
